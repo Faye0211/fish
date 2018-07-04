@@ -1,0 +1,126 @@
+.lesson-video {
+  width: 100%;
+  height: 422rpx;
+  display: block;
+}
+.lessonInfo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 194rpx;
+  /* background-color:skyblue; */
+}
+.lessonInfo .left {
+}
+.lessonInfo .left .title {
+  font-size: 32rpx;
+}
+.lessonInfo .left .sub-title {
+  color: #a2a2a2;
+  margin-top: 26rpx;
+  font-size: 20rpx;
+  display: flex;
+  align-items: center;
+}
+.lessonInfo .left .sub-title text {
+}
+.lessonInfo .right {
+}
+.lessonInfo .right button {
+  width: 120rpx;
+  height: 50rpx;
+  background: rgba(255, 143, 61, 1);
+  border-radius: 10rpx;
+  font-size: 23rpx;
+  color: white;
+}
+
+/* 底部样式 */
+
+.page,
+.page__bd {
+  height: 573rpx;
+}
+.page__bd {
+  padding-bottom: 0;
+}
+.weui-tab__content {
+  padding-top: 60rpx;
+  text-align: center;
+}
+/* 自己增加的高亮样式 */
+.myui-bar__item_on {
+  color: #ff547c;
+}
+/* 滑块 */
+.myui-navbar__slider {
+  background-color: #ff547c;
+  width: 122rpx;
+  height: 3rpx;
+}
+.myui-navbar__title {
+  font-size: 24rpx;
+}
+
+/* 底部tab 的第一个
+  weui 第一个区域 增加了层级 会出现无法隐藏
+  weui navbar 直接给weui-tab__content  后面加自己的类名 使用弹性布局 出现了无法隐藏的问题 
+  往下挪了一级 搞定了
+*/
+.weui-tab__content{
+  height: 100%;
+}
+.weui-tab__content .one {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.one view {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 51rpx 0 46rpx;
+}
+/* 高亮样式` */
+.one view.highLight text {
+  color: #ff547c;
+}
+.one view text {
+  font-size: 22rpx;
+  color: #a9a9a9;
+}
+
+/* 增加顶部颜色 */
+.myui-navbar {
+  background-color: white;
+}
+
+/* 区域3 */
+.three {
+  display: flex;
+  flex-direction: column;
+}
+.three > view {
+  display: flex;
+  padding-left: 41rpx;
+  height: 174rpx;
+  align-items: center;
+}
+.three > view .left {
+  margin-right: 32rpx;
+}
+.three > view .left image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.three > view .right text {
+  display: block;
+}
+.three > view .right .title {
+  font-size: 29rpx;
+}
+.three > view .right .subTitle {
+  font-size: 22rpx;
+  margin-top: 24rpx;
+}

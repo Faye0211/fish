@@ -1,0 +1,55 @@
+page {
+  background-color: #f1f3f6;
+  padding-top: 24rpx;
+}
+.item {
+  margin: 0 auto 28rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 702rpx;
+  height: 213rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 10rpx;
+  box-shadow: 1rpx 0rpx 46rpx rgba(234, 234, 234, 0.47);
+}
+.item .left {
+  display: flex;
+  align-items: center;
+}
+.item .left image {
+  width: 151rpx;
+  height: 151rpx;
+}
+.item .left .title-box {
+  display: flex;
+  height: 60rpx;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 45rpx;
+}
+.item .left .title-box .title {
+  font-size: 32rpx;
+}
+
+.item .left .title-box .subTitle {
+  font-size: 22rpx;
+}
+.item .right {
+}
+.item .right button {
+  color: white;
+  font-size: 21rpx;
+}
+.item .right .no-full {
+  width: 154rpx;
+  height: 50rpx;
+  background: rgba(255, 84, 124, 1);
+  border-radius: 6rpx;
+}
+.item .right .full {
+  width: 154rpx;
+  height: 50rpx;
+  background: rgba(202, 202, 202, 1);
+  border-radius: 6rpx;
+}

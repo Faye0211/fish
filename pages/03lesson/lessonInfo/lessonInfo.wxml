@@ -1,0 +1,64 @@
+<!-- 顶部的视频 -->
+<video id="video" class="lesson-video" src="{{currentUrl}}" autoplay="{{true}}" />
+<!-- 课程信息 -->
+<view class="lessonInfo">
+    <view class="left">
+        <text class="title">{{name}}班视频演示</text>
+        <view class="sub-title">
+            <!-- 能够解析回车 -->
+            <text decode="{{true}}">主讲:{{teacher}}&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;课时:{{movieList.length}}&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;{{studyNumber}}人已学习
+            </text>
+        </view>
+    </view>
+    <view class="right">
+        <button bind:tap="toBuyLesson">关注</button>
+    </view>
+</view>
+<!-- 底部nav -->
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-tab">
+            <!-- tab栏 -->
+            <view class="weui-navbar myui-navbar">
+                <block wx:for="{{tabs}}" wx:key="*this">
+                    <view id="{{index}}" class="weui-navbar__item  {{activeIndex == index ? 'myui-bar__item_on' : ''}}" bind:tap="tabClick">
+                        <view class="weui-navbar__title myui-navbar__title">{{item}}</view>
+                    </view>
+                </block>
+                <view class="weui-navbar__slider myui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+            </view>
+            <!-- 内容区域 -->
+            <view class="weui-tab__panel">
+                <view class="weui-tab__content " hidden="{{activeIndex != 0}}">
+                    <view class="one">
+                        <block wx:for="{{movieList}}">
+                            <!-- 点击那一行 获取视频链接
+                            重新绑定数据
+                            设置给顶部的video的 src -->
+                            <view bind:tap="changeVideo" data-url="{{item.url}}" class="{{currentUrl==item.url?'highLight':''}}">
+                                <text>0{{index+1}}.{{name+item.subTitle}}</text>
+                                <text>{{item.time}}</text>
+                            </view>
+                        </block>
+                    </view>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">{{desc}}</view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+                    <view class="three">
+                        <block wx:for="{{commentList}}">
+                            <view>
+                                <view class="left">
+                                    <image src="{{item.icon}}" />
+                                </view>
+                                <view class="right">
+                                    <text class="title">{{item.name}}</text>
+                                    <text class="subTitle">{{item.info}}</text>
+                                </view>
+                            </view>
+                        </block>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

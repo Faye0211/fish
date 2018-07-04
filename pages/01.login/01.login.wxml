@@ -1,0 +1,36 @@
+<form bindsubmit="doRegister">
+    <view class="top">
+        <text class="title">请完善孩子信息</text>
+        <text class="sub-title">以便为您提供更好的服务</text>
+    </view>
+    <view class="input">
+        <!-- view.cell*4>label+input -->
+        <view class="cell">
+            <label for="">姓名:</label>
+            <input name="name" type="text" placeholder="如酷小鱼" />
+        </view>
+        <view class="cell">
+            <label for="">年龄:</label>
+            <input name="age" type="number" />
+        </view>
+        <view class="cell">
+            <label for="">性别:</label>
+            <!-- name设置给父盒子 -->
+            <radio-group name="sex">
+                <radio name="sex" value="boy" color="#0E74FF" />
+                <label>王子:</label>
+                <radio name="sex" value="girl" color="#0E74FF" font-size="14rpx" />
+                <label>公主:</label>
+            </radio-group>
+        </view>
+        <view class="cell">
+            <label for="">所在地</label>
+            <picker name="location" mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+                <text decode="true" class="picker">
+                    {{region[0]}}&nbsp;{{region[1]}}&nbsp;{{region[2]}}
+                </text>
+            </picker>
+        </view>
+    </view>
+    <button  form-type="submit">提交</button>
+</form>

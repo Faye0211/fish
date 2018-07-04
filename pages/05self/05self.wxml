@@ -1,0 +1,20 @@
+<view class="top">
+    <image src="{{userInfo.sex=='girl'?'/img/motherL.gif':'/img/motherP.png'}}"></image>
+    <text>{{userInfo.name}}</text>
+</view>
+<view class="vip-box">
+    <text>VIP会员到期时间</text>
+    <text>2019-05-05 12:05</text>
+</view>
+<view class="user-opt">
+    <view class="weui-cells weui-cells_after-title">
+        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__bd">绑定手机号</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__bd">我的关注</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+    </view>
+</view>

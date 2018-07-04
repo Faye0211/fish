@@ -1,0 +1,104 @@
+swiper {
+}
+swiper swiper-item {
+}
+swiper swiper-item image {
+  width: 672rpx;
+  height: 266rpx;
+  display: block;
+  margin: 26rpx auto;
+  border-radius: 10rpx;
+  box-shadow: 0rpx 21rpx 46rpx rgba(255, 84, 124, 0.47);
+}
+
+/* 热门区域 */
+.hot-lesson {
+}
+.title-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 52rpx 25rpx 34rpx;
+}
+.title-box .left {
+  display: flex;
+  align-items: center;
+}
+.title-box .left image {
+  width: 30rpx;
+  height: 30rpx;
+}
+.title-box .left text {
+  font-size: 26rpx;
+  color: rgba(51, 51, 51, 1);
+}
+.title-box .right {
+  display: flex;
+  align-items: center;
+  font-size: 22rpx;
+  color: rgba(170, 172, 177, 1);
+}
+.title-box .right image {
+  width: 25rpx;
+  height: 25rpx;
+}
+
+/* 热门区域的滚动部分 */
+.hot-lesson scroll-view {
+  /* display: flex; scroll-view弹性布局无法生效 */
+  height: 160rpx;
+  /* 让内部内容不换行 需要横向撑开 */
+  white-space: nowrap;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+}
+.hot-lesson scroll-view .item {
+  width: 300rpx;
+  display: inline-block;
+  height: 160rpx;
+  border-radius: 10rpx;
+  box-shadow: 7rpx 0rpx 21rpx rgba(67, 153, 249, 0.47);
+  margin-right: 18rpx;
+  padding-top: 29rpx;
+  padding-left: 26rpx;
+  box-sizing: border-box;
+  color: white;
+}
+.hot-lesson scroll-view .item .title {
+  font-size: 30rpx;
+}
+.hot-lesson scroll-view .item .subTitle {
+  font-size: 20rpx;
+  margin-top: 14rpx;
+}
+
+/*  推荐视频布局 */
+/* ctrl+shift+p 输入 px2rpx */
+.recommend-movie {
+}
+.recommend-movie .bottom {
+  display: flex;
+  flex-wrap: wrap;
+}
+.recommend-movie .item {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.recommend-movie .item image {
+  width: 342rpx;
+  height: 222rpx;
+}
+.recommend-movie .item text{
+  display: block;
+  align-self: flex-start;
+  padding: 5rpx 23rpx;
+}
+.recommend-movie .item .title {
+  font-size: 20rpx;
+  color: rgba(102, 102, 102, 1);
+}
+.recommend-movie .item .seeCount {
+  font-size: 16rpx;
+  color: rgba(153, 153, 153, 1);
+}

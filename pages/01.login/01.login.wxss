@@ -1,0 +1,70 @@
+page{
+    background-color: #F5F7FB;
+}
+.top{
+    height: 299rpx;
+    overflow: hidden;
+    /* background-color: skyblue; */
+}
+.top text{
+    display: block;
+    text-align: center;
+}
+.top .title{
+    margin-top: 103rpx;
+    margin-bottom: 23rpx;
+    font-size: 34rpx;
+}
+.top .sub-title{
+    color:#959595;
+    font-size:26rpx;
+}
+/* 输入框区域 */
+.input{
+    height: 478rpx;
+    background-color: white;
+    font-size:28rpx;
+    padding: 71rpx 73rpx 69rpx;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.input .cell{
+    display: flex;
+    align-items: center;
+}
+.input .cell >label{
+    width: 92rpx;
+    text-align: right;
+    margin-right: 46rpx;
+}
+.input .cell >input{
+    flex:1;
+    border-bottom: 1px solid #EEEEEE;
+
+}
+.input .cell >radio-group{}
+/*
+    nth-of-typ 只会找同一类的标签
+*/
+.input .cell >radio-group >label:nth-of-type(1){
+    margin-right: 100rpx;
+}
+.input .cell >radio-group >radio{
+    color:#0E74FF;
+    transform: scale(.5);
+}
+.input .cell >picker{
+    border-bottom: 1px solid #EEEEEE;
+}
+
+button{
+    width:510rpx;
+    height:96rpx;
+    margin-top: 168rpx;
+    color:white;
+    background:rgba(255,84,124,1);
+    border-radius:48rpx;
+    box-shadow:0rpx 21rpx 46rpx  rgba(255,84,124,0.47);
+}
